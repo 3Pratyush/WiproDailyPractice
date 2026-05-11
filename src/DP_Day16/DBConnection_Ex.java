@@ -17,7 +17,6 @@ package DP_Day16;
 		Connection con=DriverManager.getConnection(url, username, password);
 		
 		System.out.println("Database Connected Successfully");
-		System.out.println("hiiii");
 		
 		con.close();
 	}
