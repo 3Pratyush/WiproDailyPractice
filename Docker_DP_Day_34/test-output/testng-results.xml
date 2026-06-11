@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-05T16:22:13 IST" name="Default suite" finished-at="2026-06-05T16:22:17 IST" duration-ms="3383">
+    <groups>
+    </groups>
+    <test started-at="2026-06-05T16:22:13 IST" name="Default test" finished-at="2026-06-05T16:22:17 IST" duration-ms="3383">
+      <class name="test.LoginTest">
+        <test-method signature="login()[pri:0, instance:test.LoginTest@418e7838]" started-at="2026-06-05T16:22:13 IST" name="login" finished-at="2026-06-05T16:22:17 IST" duration-ms="3336" status="FAIL">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'BT-2105906', ip: '192.168.29.135'
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'BT-2105906', ip: '192.168.29.135'
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:161)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:141)
+at test.LoginTest.login(LoginTest.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:439)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:89)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+... 30 more
+Caused by: java.net.ConnectException
+at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:313)
+at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl$0(Exchange.java:570)
+at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:419)
+at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl$2(Exchange.java:574)
+at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:971)
+at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2399)
+at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:574)
+at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:396)
+at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:438)
+at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$2(MultiExchange.java:482)
+at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:971)
+at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2399)
+at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:472)
+at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$0(MultiExchange.java:358)
+at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1171)
+at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1794)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.nio.channels.UnresolvedAddressException
+at java.base/sun.nio.ch.Net.checkAddress(Net.java:144)
+at java.base/sun.nio.ch.Net.checkAddress(Net.java:152)
+at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:918)
+at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:936)
+at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+... 22 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- test.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

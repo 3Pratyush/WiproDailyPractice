@@ -1,0 +1,10 @@
+version: '3'
+services:
+  selenium:
+    image: selenium/standalone-chrome
+    ports:
+      - "4444:4444"
+  orangehrm-tests:
+    build: .
+    depends_on:
+      - selenium
